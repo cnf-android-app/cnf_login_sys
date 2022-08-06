@@ -1,0 +1,3 @@
+[submodule "cnf_common"]
+	path = cnf_common
+	url = git@github.com:cnf-android-app/cnf_common.git

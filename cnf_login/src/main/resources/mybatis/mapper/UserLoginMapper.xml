@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cnf.dao.UserLoginMapper">
+
+  <select id="userLogin" resultMap="userLoginMap">
+    SELECT *
+    FROM login
+    WHERE username = #{username}
+      AND password = encode(digest(#{password}, 'md5'), 'base64');
+  </select>
+
+  <resultMap id="userLoginMap" type="com.cnf.domain.UserLogin">
+    <result column="userid" property="userId"/>
+    <result column="username" property="username"/>
+    <result column="password" property="password"/>
+    <result column="notes" property="notes"/>
+    <result column="personlink" property="personLink"/>
+    <result column="pswdlastupdated" property="passwordLastUpdated"/>
+    <result column="forcepasswordreset" property="forcePasswordReset"/>
+    <result column="createdby" property="createdBy"/>
+    <result column="createdts" property="createdTS"/>
+    <result column="nologinvirtualonly" property="noLoginVirtualOnly"/>
+    <result column="deactivatedts" property="deActivatedTS"/>
+    <result column="deactivated_userid" property="deActivatedByUserId"/>
+    <result column="lastupdatedts" property="lastUpdatedTS"/>
+    <result column="userrole" property="userRole"/>
+    <result column="homemuni" property="homeMuni"/>
+
+  </resultMap>
+</mapper>

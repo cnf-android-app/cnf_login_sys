@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cnf.dao.MuniLoginMapper">
+
+  <select id="selectLoginMuniAuthPeriod" resultMap="LoginMuniAuthPeriodMap">
+    SELECT *
+    FROM loginmuniauthperiod
+    WHERE muniauthperiodid = #{municipalityAuthPeriodId}
+      AND authuser_userid = #{userId}
+      AND muni_municode = #{municipalityCode};
+  </select>
+
+  <select id="selectLoginMuniAuthPeriodList" resultMap="LoginMuniAuthPeriodMap">
+    SELECT *
+    FROM loginmuniauthperiod
+    WHERE authuser_userid = #{userId}
+      AND recorddeactivatedts IS NULL
+      AND accessgranteddatestop <![CDATA[>]]> now()
+      AND accessgranteddatestart <![CDATA[<=]]> now()
+  </select>
+
+  <resultMap id="LoginMuniAuthPeriodMap" type="com.cnf.domain.LoginMuniAuthPeriod">
+    <result column="muniauthperiodid" property="muniAuthPeriodId"/>
+    <result column="muni_municode" property="muniCode"/>
+    <result column="authuser_userid" property="userId"/>
+    <result column="accessgranteddatestart" property="accessGrantedDateStart"/>
+    <result column="accessgranteddatestop" property="accessGrantedDateStop"/>
+    <result column="recorddeactivatedts" property="recordDeactivatedTS"/>
+    <result column="authorizedrole" property="authorizedRole"/>
+    <result column="createdts" property="createdTS"/>
+    <result column="createdby_userid" property="createdByUserId"/>
+    <result column="notes" property="notes"/>
+    <result column="supportassignedby" property="supportAssignedBy"/>
+    <result column="assignmentrank" property="assignmentRank"/>
+    <result column="oathts" property="oathTS"/>
+    <result column="oathcourtentity_entityid" property="oathCourtEntityId"/>
+  </resultMap>
+
+</mapper>

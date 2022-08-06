@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cnf_common/cnf_common.iml" filepath="$PROJECT_DIR$/cnf_common/cnf_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cnf_login/cnf_login.iml" filepath="$PROJECT_DIR$/cnf_login/cnf_login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cnf_login_sys.iml" filepath="$PROJECT_DIR$/.idea/cnf_login_sys.iml" />
+    </modules>
+  </component>
+</project>
