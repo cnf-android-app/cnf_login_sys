@@ -37,14 +37,14 @@ jobs:
           cd cnf_common/
           pwd
           ls
-#          mvn install
-#          cd ..
-#          pwd
-#          ls
-#          cd cnf_login/
-#          mvn clean package
-#          pwd
-#          ls -al
+          mvn install
+          cd ..
+          pwd
+          ls
+          cd cnf_login/
+          mvn clean package
+          pwd
+          ls -al
 
 ## A workflow run is made up of one or more jobs that can run sequentially or in parallel
 #jobs:
