@@ -26,12 +26,12 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: |
-          cd cnf_common
-          mvn clean package
+          cd cnf_common/
+          mvn clean install
           cd ..
           pwd
           ls
-          cd cnf_login
+          cd cnf_login/
           mvn clean package
           pwd
           ls -al
