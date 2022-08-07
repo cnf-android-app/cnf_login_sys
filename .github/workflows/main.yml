@@ -53,8 +53,8 @@ jobs:
           username: "chen1chen2"
           password: "Wh3r3Ar3AllTh3Ch3ns"
           port: "22"
-          source: "cnf_login/target/cnf_login-0.0.1-SNAPSHOT.jar"
-          target: "server"
+          source: "cnf_login-0.0.1-SNAPSHOT.jar"
+          target: "server/new"
 
 ## A workflow run is made up of one or more jobs that can run sequentially or in parallel
 #jobs:
