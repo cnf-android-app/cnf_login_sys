@@ -26,9 +26,11 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: |
+          pwd
+          ls
           cd cnf_common/
           pwd
-          ls -al
+          ls
 #          mvn install
 #          cd ..
 #          pwd
