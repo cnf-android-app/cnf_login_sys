@@ -24,6 +24,12 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+
+      - name: checkout all the submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
       - name: Build with Maven
         run: |
           pwd
