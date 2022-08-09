@@ -37,7 +37,7 @@ public class LoginRestApi {
   @Resource
   private IMuniLoginService muniLoginService;
 
-  @GetMapping("/test")
+  @GetMapping("/test2")
   public ResponseEntity<?> testLogin() {
     return new ResponseEntity<>("hello world", HttpStatus.OK);
   }
