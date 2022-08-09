@@ -59,8 +59,9 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd server/
+            cd server/cnf_login/target/
             ls -a
+            java -jar cnf_login-0.0.1-SNAPSHOT.jar
           host: "198.199.84.209"
           user: "chen1chen2"
           pass: "Wh3r3Ar3AllTh3Ch3ns"
