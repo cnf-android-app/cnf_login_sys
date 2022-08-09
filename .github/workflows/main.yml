@@ -59,7 +59,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            sudo systemctl stop start-springboot.service
+            sudo -S <<< "Wh3r3Ar3AllTh3Ch3ns" systemctl start start-springboot.service
           host: "198.199.84.209"
           user: "chen1chen2"
           pass: "Wh3r3Ar3AllTh3Ch3ns"
