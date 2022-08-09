@@ -59,6 +59,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
+            cd server/
             ls -a
           host: "198.199.84.209"
           user: "chen1chen2"
