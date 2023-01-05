@@ -23,7 +23,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Checkout All Submodules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           submodules: recursive
 
